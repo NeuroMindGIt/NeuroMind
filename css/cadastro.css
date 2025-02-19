@@ -1,0 +1,17 @@
+/*Codigo CSS apenas para cadastro - ATT Vinícius W.*/
+
+
+/* Body da tela de usuario - VW*/
+.bodycadastro{
+    width: 100%; /*Largura 100% da tela do usuario - Att. Vinícius W. */
+    height: 100vh; /*Altura 100% da tela do usuario - Att. Vinícius W.*/
+    align-items: center; 
+    text-align: center; 
+    justify-content: center;
+    
+    
+}
+
+.logo-cadastro{
+    width: 100px;
+}
