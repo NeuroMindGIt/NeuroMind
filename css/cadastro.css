@@ -3,6 +3,7 @@
 
 /* Body da tela de usuario - VW*/
 .bodycadastro{
+    position: absolute;
     width: 100%; /*Largura 100% da tela do usuario - Att. Vinícius W. */
     height: 100vh; /*Altura 100% da tela do usuario - Att. Vinícius W.*/
     align-items: center; 
@@ -12,6 +13,43 @@
     
 }
 
+/* logo da tela de cadastro - Vw*/
 .logo-cadastro{
     width: 100px;
+}
+
+
+/*personalizando inputs da telad e cadastro -VW*/
+.bodycadastro input{
+    text-align: center;
+    height: 30px;
+    width: 70%;
+    border-radius: 10px;
+}
+
+/*Paragrafo de cadastro -Vw*/
+.bodycadastro p{
+    margin-top: 10px;
+}
+
+/*Editando a main do cadastro - Vw*/
+.maincadastro{
+    margin-top: 30%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*Editando o botão de cadastro*/
+.bodycadastro button{
+    cursor: pointer;
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+/*Texto de bem vindo do cadastro*/
+.bodycadastro h4{
+    margin-top: 20px;
+
 }
