@@ -8,7 +8,7 @@
     <title>Cadastro CareConnect</title>
 </head>
 <body class="bodycadastro">
-    <main class="maincadastro">
+    <main class="maincadastro" id="maincadastro">
     <img src="assets/icons/logo.png" class="logo-cadastro">
     <h4>Seja bem-vindo ao NeuroMind!</h4>
     <br>
@@ -26,14 +26,43 @@
     <label>Senha</label>
     <br>
     <input type="password" placeholder="Digite sua senha:" id="senha-user" class="input-cadastro">
-    <p>Já possui uma conta? <a href="pages/login.php">Clique aqui!</a></p>
+    <br><br>
+    <label>Confirme sua Senha</label>
     <br>
-    <button class="submit-cad" id="submit-cad">Cadastar</button>
+    <input type="password" placeholder="Confirm sua senha:" id="senha-user-confim" class="input-cadastro">
+    <p>Já possui uma conta? <a onclick="login()">Clique aqui!</a></p>
+    <br>
     
+    <button class="submit-cad" id="submit-cad">Cadastrar</button>
+    </form>
     <?php 
         include './includes/footer.php';
     ?>
 </main>
-</form>
+
+<body class="bodycadastro">
+    <main class="maincadastro" id="mainlogin">
+    <img src="assets/icons/logo.png" class="logo-cadastro">
+    <h4>Seja bem-vindo de volta ao NeuroMind!</h4>
+    <br>
+    <h5>Entre em sua conta</h5>
+    <br>
+    <form action="login.php" method="post">
+    <label>Email</label>
+    <br>
+    <input type="email" placeholder="Digite seu email:" id="email-user" class="input-cadastro">
+    <br><br>
+    <label>Senha</label>
+    <br>
+    <input type="password" placeholder="Digite sua senha:" id="senha-user" class="input-cadastro">
+    <p>Ainda não possui uma conta? <a onclick="cadastrar()">Cadastre-se!</a></p>
+    <br>
+    <button class="submit-cad" id="submit-cad">Entrar</button>
+    </form>
+    <?php 
+        include './includes/footer.php';
+    ?>
+</main>
+<script src="js/script.js"></script>
 </body>
 </html>
