@@ -1,3 +1,3 @@
 <footer>
-    <p>feito pela equipe &copycordex / todos os direitos reservados</p>
+    <p>Desenvolvido por <br> &copyCORDEX <br> Todos os direitos reservados</p>
 </footer>

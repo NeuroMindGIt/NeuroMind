@@ -17,20 +17,20 @@
     <form action="cadastro.php" method="post">
     <label>Nome</label>
     <br>
-    <input type="text" placeholder="Digite seu nome:" id="nome-user" class="input-cadastro">
+    <input type="text" placeholder="Digite seu nome:" id="nome" class="input-cadastro" required>
     <br><br>
     <label>Email</label>
     <br>
-    <input type="email" placeholder="Digite seu email:" id="email-user" class="input-cadastro">
+    <input type="email" placeholder="Digite seu email:" id="email" class="input-cadastro" required>
     <br><br>
     <label>Senha</label>
     <br>
-    <input type="password" placeholder="Digite sua senha:" id="senha-user" class="input-cadastro">
+    <input type="password" placeholder="Digite sua senha:" id="senha" class="input-cadastro" required>
     <br><br>
     <label>Confirme sua Senha</label>
     <br>
-    <input type="password" placeholder="Confirm sua senha:" id="senha-user-confim" class="input-cadastro">
-    <p>Já possui uma conta? <a onclick="login()">Clique aqui!</a></p>
+    <input type="password" placeholder="Confirme sua senha:" id="confima_senha" class="input-cadastro" required>
+    <p>Já possui uma conta? <a onclick="login()">Faça login!</a></p>
     <br>
     
     <button class="submit-cad" id="submit-cad">Cadastrar</button>
@@ -50,11 +50,11 @@
     <form action="login.php" method="post">
     <label>Email</label>
     <br>
-    <input type="email" placeholder="Digite seu email:" id="email-user" class="input-cadastro">
+    <input type="email" placeholder="Digite seu email:" id="email-user" class="input-cadastro" required>
     <br><br>
     <label>Senha</label>
     <br>
-    <input type="password" placeholder="Digite sua senha:" id="senha-user" class="input-cadastro">
+    <input type="password" placeholder="Digite sua senha:" id="senha-user" class="input-cadastro" required>
     <p>Ainda não possui uma conta? <a onclick="cadastrar()">Cadastre-se!</a></p>
     <br>
     <button class="submit-cad" id="submit-cad">Entrar</button>
