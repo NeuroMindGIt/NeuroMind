@@ -14,7 +14,7 @@
     <br>
     <h5>CADASTRE-SE</h5>
     <br>
-    <form action="cadastro.php" method="post">
+    <form action="controllers/autenticacao.php" method="post">
     <label>Nome</label>
     <br>
     <input type="text" placeholder="Digite seu nome:" id="nome" class="input-cadastro" required>
