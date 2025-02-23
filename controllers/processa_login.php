@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Consulta para buscar o usuário com o e-mail informado
-    $sql = "SELECT id, nome, senha, Nikname_Usuario FROM tb_cadastro WHERE email = ?";
+    $sql = "SELECT id, nome, senha, Nikname_Usuario, email FROM tb_cadastro WHERE email = ?";
     $stmt = $conexao->prepare($sql);
     if (!$stmt) {
         $_SESSION['erro'] = "Erro no SQL: " . $conexao->error;
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Verifica se o usuário foi encontrado
         if ($stmt->num_rows == 1) {
-            $stmt->bind_result($id, $nome, $senha_hash, $nickname);
+            $stmt->bind_result($id, $nome, $senha_hash, $nickname, $email);
             $stmt->fetch();
             
             // Verifica a senha utilizando password_verify()
@@ -51,6 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['usuario_logado'] = $id;
                 $_SESSION['nome'] = $nome;
                 $_SESSION['nickname'] = $nickname;  // Armazenar o nickname na sessão
+                $_SESSION['email'] = $email;  
                 header("Location: ../index.php");
                 exit();
             } else {

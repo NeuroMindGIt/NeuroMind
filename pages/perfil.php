@@ -20,14 +20,28 @@ if (!isset($_SESSION['usuario_logado'])) {
     <title>Perfil</title>
 </head>
 <body class="bodyperfil">
-   <section> <?php include '../includes/menu-nav.php';  // include menu de navegação - VW ?> </section>
+
     <img src="../assets/icons/logo.png">
     <br>
    <h1> <?php echo $_SESSION['nome']; // Exibe o nome do usuário logado ?></h1>
    <p>@<?php echo $_SESSION['nickname']; // Exibe o nome do usuário logado ?></p>
     <br>
+    <label>Email</label>
+    <div class="perfilcontatos">
+    <h3><?php echo $_SESSION['email']; // Exibe o nome do usuário logado ?></h3>
+    </div>
+    <br>
+    <label>Telefone</label>
+    <div class="perfilcontatos">
+    <h3>(13)996519799</h3>
+    </div>
+    <br>
+    <label>Bio</label>
+    <div class="perfilcontatos">
+    <h3>Bugs and Bugs</h3>
+    </div>
+    <br>
     <a href="../controllers/logout.php" class="btn btn-danger">Sair da conta</a>
-    
 </body>
 
 </html>

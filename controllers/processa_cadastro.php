@@ -107,6 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['usuario_logado'] = $stmt->insert_id; // Armazena o ID do usuário logado - VW
         $_SESSION['nome'] = $nome;
         $_SESSION['nickname'] = $nickname; // Armazena o nickname na sessão - VW
+        $_SESSION['email'] = $email; // Armazena o nickname na sessão - VW
         header("Location: ../index.php"); // Redireciona para a página do dashboard - VW
         exit();
     } else {
