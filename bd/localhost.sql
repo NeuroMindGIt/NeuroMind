@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 23, 2025 at 03:43 AM
+-- Generation Time: Feb 23, 2025 at 05:46 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -22,6 +22,17 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `neuromind` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `neuromind`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_bairro`
+--
+
+CREATE TABLE `tb_bairro` (
+  `Id_Bairro` int(11) NOT NULL,
+  `Nm_Bairro` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 -- --------------------------------------------------------
 
@@ -51,7 +62,30 @@ INSERT INTO `tb_cadastro` (`id`, `nome`, `email`, `senha`, `termos_uso`) VALUES
 (8, 'rui', 'rui@gmail.com', '$2y$10$gNIC.JBgFTb8Z/5w6sBete4qyR5aA7ikQLcJ9r1RuWbfrn6UEUfPm', '2025-02-23 01:46:32'),
 (10, 'rui', 'ruin@gmail.com', '$2y$10$01ehXfwhE5UxszlPSam97uIiv5kSj0/7Ioa2f.Xl2qiQQX39hZphq', '2025-02-23 01:46:56'),
 (11, 'luizz', 'uiz@gmail.com', '$2y$10$VqAJpljeGnw97p.eqLUMyOCtDtnjoqZHdk6Kd3UToOJHYFNvEas2q', '2025-02-23 02:18:14'),
-(12, 'maisum', 'maisum@gmail.com', '$2y$10$mhf54PC4PWFq3dPZfDiavu43Gty1FG7zODWY8SgGQU9jSw1x7GVbi', '2025-02-23 02:37:30');
+(12, 'maisum', 'maisum@gmail.com', '$2y$10$mhf54PC4PWFq3dPZfDiavu43Gty1FG7zODWY8SgGQU9jSw1x7GVbi', '2025-02-23 02:37:30'),
+(13, 'lulu', 'lulu@gmail.com', '$2y$10$HcgO3xvVJQFOOLkvr9t1iueo9OXvnEsGbtx2sO7LH2ziWycHlYAsC', '2025-02-23 03:15:52');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_cidade`
+--
+
+CREATE TABLE `tb_cidade` (
+  `Id_Cidade` int(11) NOT NULL,
+  `Nm_Cidade` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_estado`
+--
+
+CREATE TABLE `tb_estado` (
+  `Id_Estado` int(11) NOT NULL,
+  `Sg_Estado` char(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 --
 -- Indexes for dumped tables
@@ -72,7 +106,7 @@ ALTER TABLE `tb_cadastro`
 -- AUTO_INCREMENT for table `tb_cadastro`
 --
 ALTER TABLE `tb_cadastro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- Database: `phpmyadmin`
 --
@@ -343,7 +377,7 @@ CREATE TABLE `pma__userconfig` (
 --
 
 INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
-('root', '2025-02-23 02:42:47', '{\"Console\\/Mode\":\"collapse\",\"NavigationWidth\":0}');
+('root', '2025-02-23 03:37:34', '{\"Console\\/Mode\":\"collapse\"}');
 
 -- --------------------------------------------------------
 
