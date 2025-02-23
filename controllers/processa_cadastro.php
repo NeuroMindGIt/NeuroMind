@@ -1,7 +1,6 @@
-<?php
+<<?php
 
 // FORMULARIO QUE PROCESSA CADASTRO DE USUARIO, TOMEM CUIDADO NO QUE FOREM MECHER! - VW
-
 
 // Inicia a sessão - VW
 session_start();
@@ -25,20 +24,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validação básica - VW
     if (empty($nome) || empty($email) || empty($senha) || empty($confirma_senha)) {
         $_SESSION['erro'] = "Todos os campos são obrigatórios.";
-        header("Location: cadastro.php");
+        header("Location: ../index.php");
         exit();
     }
 
     if ($senha !== $confirma_senha) {
         $_SESSION['erro'] = "As senhas não coincidem.";
-        header("Location: cadastro.php");
+        header("Location: ../index.php");
+        exit();
+    }
+    
+    // Verifica se a senha possui no mínimo 8 caracteres - VW
+    if (strlen($senha) < 8) {
+        $_SESSION['erro'] = "A senha deve ter no mínimo 8 caracteres.";
+        header("Location: ../index.php");
         exit();
     }
 
     // Validação do formato do e-mail - VW
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['erro'] = "E-mail inválido.";
-        header("Location: cadastro.php");
+        header("Location: ../index.php");
         exit();
     }
 
@@ -53,14 +59,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if ($count > 0) {
             $_SESSION['erro'] = "E-mail já cadastrado.";
-            $stmt_check_email->close();  // Feche a declaração para evitar problemas de sincronia - VW
-            header("Location: cadastro.php");
+            header("Location: ../index.php");
             exit();
         }
     } else {
         $_SESSION['erro'] = "Erro ao verificar e-mail. Tente novamente.";
-        $stmt_check_email->close();  // Feche a declaração para evitar problemas de sincronia - VW
-        header("Location: cadastro.php");
+        header("Location: ../index.php");
         exit();
     }
 
