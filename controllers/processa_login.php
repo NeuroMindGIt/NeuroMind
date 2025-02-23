@@ -1,4 +1,7 @@
 <?php
+
+// FORMULARIO QUE PROCESSA o login DE USUARIO, TOMEM CUIDADO NO QUE FOREM MECHER! - VW
+
 // Inicia a sessão
 session_start();
 
