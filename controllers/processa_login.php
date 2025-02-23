@@ -1,6 +1,6 @@
 <?php
 
-// FORMULARIO QUE PROCESSA o login DE USUARIO, TOMEM CUIDADO NO QUE FOREM MECHER! - VW
+// FORMULÁRIO QUE PROCESSA O LOGIN DE USUÁRIO, TOMEM CUIDADO NO QUE FOREM MEXER! - VW
 
 // Inicia a sessão
 session_start();
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Consulta para buscar o usuário com o e-mail informado
-    $sql = "SELECT id, nome, senha FROM tb_cadastro WHERE email = ?";
+    $sql = "SELECT id, nome, senha, Nikname_Usuario FROM tb_cadastro WHERE email = ?";
     $stmt = $conexao->prepare($sql);
     if (!$stmt) {
         $_SESSION['erro'] = "Erro no SQL: " . $conexao->error;
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Verifica se o usuário foi encontrado
         if ($stmt->num_rows == 1) {
-            $stmt->bind_result($id, $nome, $senha_hash);
+            $stmt->bind_result($id, $nome, $senha_hash, $nickname);
             $stmt->fetch();
             
             // Verifica a senha utilizando password_verify()
@@ -50,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Dados corretos: cria as variáveis de sessão e redireciona para o dashboard
                 $_SESSION['usuario_logado'] = $id;
                 $_SESSION['nome'] = $nome;
+                $_SESSION['nickname'] = $nickname;  // Armazenar o nickname na sessão
                 header("Location: ../index.php");
                 exit();
             } else {

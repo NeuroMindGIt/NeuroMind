@@ -1,1 +1,5 @@
-/*Codigo CSS apenas para o menu topo - Att Vinícius W.*/
+.topo {
+    height: 50px;
+    width: 100%;
+    background: rgb(96, 7, 148);
+}

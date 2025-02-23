@@ -1,0 +1,33 @@
+/*Body perfil*/
+
+.bodyperfil{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*Imagem de perfil, ainda precisa arrumar - VW*/
+.bodyperfil img {
+    margin-top: 20%;
+    width: 30%;
+    background-size: cover;
+
+}
+
+.bodyperfil h1{
+    font-size: 20px;
+}
+
+.bodyperfil a{
+    color: red;
+    
+}
+
+.bodyperfil{
+    font-size: 10px;
+}
+
+.bodyperfil section{
+    position: fixed;
+    display: flex;
+}

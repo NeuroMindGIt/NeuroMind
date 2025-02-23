@@ -8,13 +8,9 @@ if (!isset($_SESSION['usuario_logado'])) {
     exit();
 }
 
-// Se estiver logado, exibe o dashboard - VW
-echo "Bem-vindo, " . $_SESSION['nome'] . "!"; // Exibe o nome do usuário logado
 ?>
 
 <!-- Conteúdo da página do dashboard -->
-
-<a href="./controllers/logout.php" class="btn btn-danger">Sair</a>
 
 
 <!DOCTYPE html>
@@ -26,8 +22,8 @@ echo "Bem-vindo, " . $_SESSION['nome'] . "!"; // Exibe o nome do usuário logado
     <link rel="icon" href="assets/icons/logo.png">
     <title>Dashboard</title>
 </head>
-<body>
+<body class="bodydashboard">
 
-<?php include 'includes/menu-nav.php';  // include menu de navegação - VW ?> 
+<section> <?php include 'includes/menu-nav.php';  // include menu de navegação - VW ?> </section>
 </body>
 </html>

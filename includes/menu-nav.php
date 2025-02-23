@@ -1,9 +1,10 @@
-<nav>
-    <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Mapa</a></li>
-        <li><a href="#">Calendario</a></li>
-        <li><a href="#">Chat-bot</a></li>
-        <li><a href="#">Exercicios</a></li>
-    </ul>
-</nav>
+<div class="bodymenu">
+    <nav class="menu">
+        <a href="../index.php">Inicio</a>
+        <a href="#">Mapa</a>
+        <a href="#">Calendario</a>
+        <a href="#">Chat-bot</a>
+        <a href="#">Exercicios</a>
+        <a href="pages/perfil.php">Perfil</a>
+    </nav>
+</div>
