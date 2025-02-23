@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,26 +15,25 @@
     <br>
     <h5>CADASTRE-SE</h5>
     <br>
-    <form action="controllers/autenticacao.php" method="post">
+    <form action="controllers/processa_cadastro.php" method="POST">
     <label>Nome</label>
     <br>
-    <input type="text" placeholder="Digite seu nome:" id="nome" class="input-cadastro" required>
+    <input type="text" placeholder="Digite seu nome:" name="nome" id="nome" class="input-cadastro" required>
     <br><br>
     <label>Email</label>
     <br>
-    <input type="email" placeholder="Digite seu email:" id="email" class="input-cadastro" required>
+    <input type="email" placeholder="Digite seu email:" name="email" id="email" class="input-cadastro" required>
     <br><br>
     <label>Senha</label>
     <br>
-    <input type="password" placeholder="Digite sua senha:" id="senha" class="input-cadastro" required>
+    <input type="password" placeholder="Digite sua senha:" name="senha" id="senha" class="input-cadastro" required>
     <br><br>
     <label>Confirme sua Senha</label>
     <br>
-    <input type="password" placeholder="Confirme sua senha:" id="confima_senha" class="input-cadastro" required>
+    <input type="password" placeholder="Confirme sua senha:" name="confirma_senha"  id="confima_senha" class="input-cadastro" required>
     <p>Já possui uma conta? <a onclick="login()">Faça login!</a></p>
     <br>
-    
-    <button class="submit-cad" id="submit-cad">Cadastrar</button>
+    <button type="submit" class="submit-cad" id="submit-cad">Cadastrar</button>
     </form>
     <?php 
         include './includes/footer.php';
