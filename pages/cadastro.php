@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -47,17 +50,23 @@
     <br>
     <h5>Entre em sua conta</h5>
     <br>
-    <form action="login.php" method="post">
+    <?php
+    if (isset($_SESSION['erro'])) {
+        echo '<p style="color: red;">' . $_SESSION['erro'] . '</p>';
+        unset($_SESSION['erro']);
+    }
+    ?>
+    <form action="controllers/processa_login.php" method="post">
     <label>Email</label>
     <br>
-    <input type="email" placeholder="Digite seu email:" id="email-user" class="input-cadastro" required>
+    <input type="email" placeholder="Digite seu email:"  name="email" id="email" class="input-cadastro" required>
     <br><br>
     <label>Senha</label>
     <br>
-    <input type="password" placeholder="Digite sua senha:" id="senha-user" class="input-cadastro" required>
+    <input type="password" placeholder="Digite sua senha:" name="senha" id="senha" class="input-cadastro" required>
     <p>Ainda não possui uma conta? <a onclick="cadastrar()">Cadastre-se!</a></p>
     <br>
-    <button class="submit-cad" id="submit-cad">Entrar</button>
+    <button type="submit" class="submit-cad" id="submit-cad">Entrar</button>
     </form>
     <?php 
         include './includes/footer.php';
