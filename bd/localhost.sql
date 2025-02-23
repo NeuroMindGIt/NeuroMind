@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 23, 2025 at 05:46 AM
+-- Generation Time: Feb 24, 2025 at 12:14 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,25 +45,22 @@ CREATE TABLE `tb_cadastro` (
   `nome` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `senha` text NOT NULL,
-  `termos_uso` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `termos_uso` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `Foto_Usuario` mediumblob DEFAULT NULL,
+  `Nikname_Usuario` varchar(20) DEFAULT NULL,
+  `Nr_Telefone` char(11) DEFAULT NULL,
+  `Bios_Usuario` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_cadastro`
 --
 
-INSERT INTO `tb_cadastro` (`id`, `nome`, `email`, `senha`, `termos_uso`) VALUES
-(1, 'Vinicius', 'vinicius@gmail.com', '$2y$10$zhSsrngYxJ.CeuGxVvfnXeIUoVF73.0ZZ/W0a91J5UJ4G1AR2/2Dq', '2025-02-23 01:39:15'),
-(2, 'joao', 'jao@gmai.com', '$2y$10$G/5u7UdugIOCsbucmtl2wuaeMmktcccpOvH/ohQSKdp0R.BcnQ5k.', '2025-02-23 01:39:15'),
-(3, 'leo', 'leo@gmail.com', '$2y$10$0UOyrvow1Ykxq8FiK6LEjOgMQCaGMpY8puzA9RjJzNkJTPwzqxn26', '2025-02-23 01:39:15'),
-(4, 'kayky', 'kayky@gmail.com', '$2y$10$srQQ3EYb9sKY2b4milcJrOhsGXqsLQ29CVVhEyB6I8m.3OhwKnQi.', '2025-02-23 01:39:15'),
-(6, 'richard', 'richard@gmail.com', '$2y$10$n8au/Rv7yagGGFwirrE1m.5/nbofdjHZT1UrcjNdDuYWd4FSznGgC', '2025-02-23 01:39:15'),
-(7, 'kleber', 'kleber@gmail.com', '$2y$10$mdhJp1FiuKtd6NHvfMWGZu7PAz8ny95ME/IqHVLFajbyFP/atS.h6', '2025-02-23 01:39:15'),
-(8, 'rui', 'rui@gmail.com', '$2y$10$gNIC.JBgFTb8Z/5w6sBete4qyR5aA7ikQLcJ9r1RuWbfrn6UEUfPm', '2025-02-23 01:46:32'),
-(10, 'rui', 'ruin@gmail.com', '$2y$10$01ehXfwhE5UxszlPSam97uIiv5kSj0/7Ioa2f.Xl2qiQQX39hZphq', '2025-02-23 01:46:56'),
-(11, 'luizz', 'uiz@gmail.com', '$2y$10$VqAJpljeGnw97p.eqLUMyOCtDtnjoqZHdk6Kd3UToOJHYFNvEas2q', '2025-02-23 02:18:14'),
-(12, 'maisum', 'maisum@gmail.com', '$2y$10$mhf54PC4PWFq3dPZfDiavu43Gty1FG7zODWY8SgGQU9jSw1x7GVbi', '2025-02-23 02:37:30'),
-(13, 'lulu', 'lulu@gmail.com', '$2y$10$HcgO3xvVJQFOOLkvr9t1iueo9OXvnEsGbtx2sO7LH2ziWycHlYAsC', '2025-02-23 03:15:52');
+INSERT INTO `tb_cadastro` (`id`, `nome`, `email`, `senha`, `termos_uso`, `Foto_Usuario`, `Nikname_Usuario`, `Nr_Telefone`, `Bios_Usuario`) VALUES
+(16, 'Vinícius WIlliam', 'vinicius@gmail.com', '$2y$10$ZJ94xRFwYZfH0pdbcViEre1zZCXvMNbjU/HubqKEOIkBj31fxIOv2', '0000-00-00 00:00:00', NULL, 'viníciuswilliam5685', NULL, NULL),
+(18, 'João Gomes', 'jao@gmail.com', '$2y$10$hqqz9Dlv28zHGmtoAQfmNun2tTcRqyhVYNgeUd0VVI.rwO7oJqXgm', NULL, NULL, 'joãogomes7098', NULL, NULL),
+(22, 'Leonardo', 'leozin1@gmail.com', '$2y$10$tYAAzMD24trqkSnQxPjKUex532mvGgC1KfeD3hRNfh1fC9m/JcvrK', '2025-02-23 22:30:12', NULL, 'leonardo2022', NULL, NULL),
+(23, 'vitor', 'vitor@gmail.com', '$2y$10$JweNOyDG3EmziPIbky1oVOviq0Yky.8cEl5I2VMiAjSNqGktwsd5y', '2025-02-23 23:02:56', NULL, 'vitor3534', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -106,7 +103,7 @@ ALTER TABLE `tb_cadastro`
 -- AUTO_INCREMENT for table `tb_cadastro`
 --
 ALTER TABLE `tb_cadastro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- Database: `phpmyadmin`
 --
@@ -163,6 +160,13 @@ CREATE TABLE `pma__column_info` (
   `input_transformation_options` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Column information for phpMyAdmin';
 
+--
+-- Dumping data for table `pma__column_info`
+--
+
+INSERT INTO `pma__column_info` (`id`, `db_name`, `table_name`, `column_name`, `comment`, `mimetype`, `transformation`, `transformation_options`, `input_transformation`, `input_transformation_options`) VALUES
+(1, 'neuromind', 'tb_cadastro', 'Foto_Usuario', '', 'image_jpeg', '', '', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -212,6 +216,13 @@ CREATE TABLE `pma__favorite` (
   `username` varchar(64) NOT NULL,
   `tables` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Favorite tables';
+
+--
+-- Dumping data for table `pma__favorite`
+--
+
+INSERT INTO `pma__favorite` (`username`, `tables`) VALUES
+('root', '[{\"db\":\"neuromind\",\"table\":\"tb_cadastro\"}]');
 
 -- --------------------------------------------------------
 
@@ -270,7 +281,7 @@ CREATE TABLE `pma__recent` (
 --
 
 INSERT INTO `pma__recent` (`username`, `tables`) VALUES
-('root', '[{\"db\":\"neuromind\",\"table\":\"tb_cadastro\"}]');
+('root', '[{\"db\":\"neuromind\",\"table\":\"tb_cadastro\"},{\"db\":\"neuromind\",\"table\":\"tb_bairro\"},{\"db\":\"neuromind\",\"table\":\"tb_cidade\"},{\"db\":\"neuromind\",\"table\":\"tb_estado\"}]');
 
 -- --------------------------------------------------------
 
@@ -341,6 +352,13 @@ CREATE TABLE `pma__table_uiprefs` (
   `last_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Tables'' UI preferences';
 
+--
+-- Dumping data for table `pma__table_uiprefs`
+--
+
+INSERT INTO `pma__table_uiprefs` (`username`, `db_name`, `table_name`, `prefs`, `last_update`) VALUES
+('root', 'neuromind', 'tb_cadastro', '{\"sorted_col\":\"`tb_cadastro`.`Nikname_Usuario` DESC\"}', '2025-02-23 21:48:47');
+
 -- --------------------------------------------------------
 
 --
@@ -377,7 +395,7 @@ CREATE TABLE `pma__userconfig` (
 --
 
 INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
-('root', '2025-02-23 03:37:34', '{\"Console\\/Mode\":\"collapse\"}');
+('root', '2025-02-23 23:13:13', '{\"Console\\/Mode\":\"collapse\"}');
 
 -- --------------------------------------------------------
 
@@ -540,7 +558,7 @@ ALTER TABLE `pma__bookmark`
 -- AUTO_INCREMENT for table `pma__column_info`
 --
 ALTER TABLE `pma__column_info`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pma__export_templates`
