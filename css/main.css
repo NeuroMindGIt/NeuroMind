@@ -4,7 +4,8 @@
 @import url("./cadastro.css");
 @import url("./footer.css");
 @import url("./reset.css");
-
+@import url("./perfil.css");
+@import url("./menu-nav.css");
 
 /* Para dispositivos desktop (largura maior que 768px) */
 @media (min-width: 768px) {

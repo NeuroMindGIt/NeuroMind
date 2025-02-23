@@ -36,7 +36,7 @@ session_start();
     <input type="password" placeholder="Confirme sua senha:" name="confirma_senha"  id="confima_senha" class="input-cadastro" required>
     <p>Já possui uma conta? <a onclick="login()">Faça login!</a></p>
     <p>Ao se cadastrar você aceita os <a onclick=""> Termos de uso e condições!</a></p>
-    <br>
+    <br>    
     <button type="submit" class="submit-cad" id="submit-cad">Cadastrar</button>
     </form>
     <?php 
