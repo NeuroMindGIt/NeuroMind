@@ -4,3 +4,18 @@
 @import url("./cadastro.css");
 @import url("./footer.css");
 @import url("./reset.css");
+
+
+/* Para dispositivos desktop (largura maior que 768px) */
+@media (min-width: 768px) {
+    body {
+      display: none;
+    }
+  }
+  
+  /* Para dispositivos móveis (largura até 768px) */
+  @media (max-width: 768px) {
+    body {
+      display: block;
+    }
+  }
