@@ -30,6 +30,7 @@
 /*Paragrafo de cadastro -Vw*/
 .bodycadastro p{
     margin-top: 10px;
+    font-size: 12px;
 }
 
 /*Editando a main do cadastro - Vw*/
@@ -52,4 +53,10 @@
 .bodycadastro h4{
     margin-top: 20px;
 
+}
+
+.bodycadastro a{
+    color: blue;
+    cursor: pointer;
+    
 }
