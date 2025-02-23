@@ -49,12 +49,14 @@
     border-radius: 10px;
 }
 
-/*Texto de bem vindo do cadastro*/
+/*Texto de bem vindo do cadastro - Vw*/
 .bodycadastro h4{
     margin-top: 20px;
 
 }
 
+
+/* COr dos links de cadastro */
 .bodycadastro a{
     color: blue;
     cursor: pointer;
