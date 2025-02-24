@@ -44,6 +44,8 @@
 /*Editando o botão de cadastro*/
 .bodycadastro button{
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
     width: 80%;
     height: 30px;
     border-radius: 10px;
