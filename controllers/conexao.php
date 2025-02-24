@@ -4,7 +4,7 @@
 
 $servidor = "localhost";
 $usuario = "root";
-$senha = "";
+$senha = "usbw";
 $banco = "neuromind";
 
 $conexao = new mysqli($servidor, $usuario, $senha, $banco);
