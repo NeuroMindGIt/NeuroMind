@@ -1,3 +1,10 @@
+.bodymenu {
+    min-height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .menu {
     display: flex;
     background-color: rgb(34, 34, 34);
@@ -6,13 +13,6 @@
     width: 290px;
     height: 40px;
     border-radius: 10px;
-}
-
-.bodymenu {
-    display: flex;
-    min-height: 150vh;
-    justify-content: center;
-    align-items: center;
 }
 
 .menu a{

@@ -33,12 +33,12 @@ if (!isset($_SESSION['usuario_logado'])) {
     <br>
     <label>Telefone</label>
     <div class="perfilcontatos">
-    <h3><?php echo $_SESSION['telefone']; // Exibe o nome do usuário logado ?></h3>
+    <h3><?php echo $_SESSION['Nr_Telefone']; // Exibe o nome do usuário logado ?></h3>
     </div>
     <br>
     <label>Bio</label>
     <div class="perfilcontatos">
-    <h3><?php echo $_SESSION['bio']; // Exibe o nome do usuário logado ?></h3>
+    <h3><?php echo $_SESSION['bio']; // Exibe a biografia do usuário logado ?></h3>
     </div>
     <br>
     <a href="../controllers/logout.php" class="btn btn-danger">Sair da conta</a>

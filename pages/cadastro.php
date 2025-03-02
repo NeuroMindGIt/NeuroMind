@@ -40,9 +40,7 @@ session_start();
     <br>    
     <button type="submit" class="submit-cad" id="submit-cad">Cadastrar</button>
     </form>
-    <?php 
-        include './includes/footer.php';
-    ?>
+    
 </main>
 
 <body class="bodycadastro">
@@ -70,9 +68,7 @@ session_start();
     <br>
     <button type="submit" class="submit-cad" id="submit-cad">Entrar</button>
     </form>
-    <?php 
-        include './includes/footer.php';
-    ?>
+
 </main>
 <script src="js/script.js"></script>
 </body>

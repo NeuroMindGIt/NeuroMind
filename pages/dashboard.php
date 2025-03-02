@@ -24,6 +24,10 @@ if (!isset($_SESSION['usuario_logado'])) {
 </head>
 <body class="bodydashboard">
 
-<section> <?php include 'includes/menu-nav.php';  // include menu de navegação - VW ?> </section>
+
+<?php include 'includes/menu-nav.php';  // include menu de navegação - VW ?>
+
+ <?php include './includes/footer.php'; ?> 
+
 </body>
 </html>
